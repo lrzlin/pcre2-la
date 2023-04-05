@@ -56,6 +56,7 @@ extern "C" {
 /* #define SLJIT_CONFIG_RISCV_32 1 */
 /* #define SLJIT_CONFIG_RISCV_64 1 */
 /* #define SLJIT_CONFIG_S390X 1 */
+/* #define SLJIT_CONFIG_LOONG_64 1 */
 
 /* #define SLJIT_CONFIG_AUTO 1 */
 /* #define SLJIT_CONFIG_UNSUPPORTED 1 */
