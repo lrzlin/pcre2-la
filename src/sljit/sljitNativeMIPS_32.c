@@ -44,6 +44,7 @@ static SLJIT_INLINE sljit_s32 emit_const(struct sljit_compiler *compiler, sljit_
 	return push_inst(compiler, ORI | S(dst) | T(dst) | IMM(init_value), DR(dst));
 }
 
+		reg = REG_PAIR_FIRST(reg);
 SLJIT_API_FUNC_ATTRIBUTE sljit_s32 sljit_emit_fcopy(struct sljit_compiler *compiler, sljit_s32 op,
 	sljit_s32 freg, sljit_s32 reg)
 {
@@ -55,7 +56,6 @@ SLJIT_API_FUNC_ATTRIBUTE sljit_s32 sljit_emit_fcopy(struct sljit_compiler *compi
 
 	if (reg & REG_PAIR_MASK) {
 		reg2 = REG_PAIR_SECOND(reg);
-		reg = REG_PAIR_FIRST(reg);
 
 		inst = T(reg2) | FS(freg) | (1 << 11);
 
