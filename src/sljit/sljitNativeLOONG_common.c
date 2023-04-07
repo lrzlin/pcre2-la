@@ -64,6 +64,12 @@ static const sljit_u8 freg_map[SLJIT_NUMBER_OF_FLOAT_REGISTERS + 3] = {
 	0, 0, 1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 31, 29, 28, 27, 26, 25, 24, 8, 9,
 };
 
+#define RD(rd)		((sljit_ins)reg_map[rd] << 0)
+#define RJ(rj)	((sljit_ins)reg_map[rj] << 5)
+#define RK(rk)	((sljit_ins)reg_map[rk] << 10)
+#define FRD(rd)		((sljit_ins)freg_map[rd] << 0)
+#define FRJ(rj)	((sljit_ins)freg_map[rj] << 5)
+#define FRK(rk)	((sljit_ins)freg_map[rk] << 10)
 
 #define ADD_D       0x00108000
 #define ADDI_D      0x02c00000
