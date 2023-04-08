@@ -88,4 +88,7 @@ src/stamp-h1
 zig-out/
 zig-cache/
 
+build/
+.cache/
+
 # End
