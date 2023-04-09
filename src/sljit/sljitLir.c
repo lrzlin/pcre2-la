@@ -2489,6 +2489,8 @@ static sljit_s32 sljit_emit_fmem_unaligned(struct sljit_compiler *compiler, slji
 #	include "sljitNativeRISCV_common.c"
 #elif (defined SLJIT_CONFIG_S390X && SLJIT_CONFIG_S390X)
 #	include "sljitNativeS390X.c"
+#elif (defined SLJIT_CONFIG_LOONG_64 && SLJIT_CONFIG_LOONG_64)
+#	include "sljitNativeLOONG_common.c"
 #endif
 
 static SLJIT_INLINE sljit_s32 emit_mov_before_return(struct sljit_compiler *compiler, sljit_s32 op, sljit_s32 src, sljit_sw srcw)
